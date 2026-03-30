@@ -7,13 +7,13 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        fadeInUp: {
-          '0%':   { opacity: '0', transform: 'translateY(10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0px)' },
+        'fadeInUp': {
+          '0%':   { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },   // ← must be 1
         },
       },
       animation: {
-        fadeInUp: 'fadeInUp 0.5s ease-out forwards',
+        fadeInUp: 'fadeInUp 0.3s ease-out forwards',
       },
       fontFamily: {
         fraunces: ["var(--font-fraunces)"],
