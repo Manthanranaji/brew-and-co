@@ -10,7 +10,7 @@ const contacts = [
     {
         key: "instagram",
         title: "Instagram",
-        link: "https://instagram/manthan.webdev",
+        link: "https://instagram.com/manthan.webdev",
     },
 ]
 
