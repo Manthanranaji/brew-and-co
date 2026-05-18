@@ -58,6 +58,31 @@ export const menus = [
   },
 ];
 
+function CoffeeBean({ className = "" }) {
+  return (
+    <svg
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      {/* Bean shape */}
+      <path
+        d="M60 15C38 15 20 34 20 60C20 86 38 105 60 105C82 105 100 86 100 60C100 34 82 15 60 15Z"
+        fill="#6F4E37"
+      />
+
+      {/* Middle curve */}
+      <path
+        d="M62 20C48 35 45 55 52 72C57 84 55 95 48 103"
+        stroke="#3E2723"
+        strokeWidth="6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export default function Menu() {
 
   // ✅ one ref per section (menus.length = 5)
@@ -70,15 +95,80 @@ export default function Menu() {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-[#F5EFE6]">
+    <div className="relative scroll-smooth min-h-screen w-full pt-24 bg-gradient-to-br from-[#F7F1E8] to-[#EFE4D4]">
       <NavBar />
+      <div className="absolute inset-0  pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
+  <CoffeeBean className="absolute top-28 left-10 md:w-12 md:h-12 w-6 h-6 opacity-20 animate-softBlink" />
+
+  <CoffeeBean className="absolute top-40 right-20 w-8 h-8 opacity-10 rotate-[30deg] animate-softBlink [animation-delay:700ms]" />
+
+  <CoffeeBean className="absolute bottom-72 left-2/3 md:h-8 md:w-8 w-5 h-5 opacity-20 -rotate-[15deg] animate-softBlink [animation-delay:300ms]" />
+
+  <CoffeeBean className="absolute bottom-56 left-16 w-6 h-6 md:w-10 md:h-10 opacity-20 rotate-[45deg] animate-softBlink [animation-delay:900ms]" />
+
+  <CoffeeBean className="absolute top-1/4 left-1/3 w-7 h-7 md:w-10 md:h-10 opacity-10 rotate-[18deg] animate-softBlink [animation-delay:500ms]" />
+
+  <CoffeeBean className="absolute top-[18%] right-[32%] w-5 h-5 md:w-8 md:h-8 opacity-15 -rotate-[20deg] animate-softBlink [animation-delay:1200ms]" />
+
+  <CoffeeBean className="absolute bottom-[22%] right-[18%] w-8 h-8 md:w-11 md:h-11 opacity-10 rotate-[65deg] animate-softBlink [animation-delay:400ms]" />
+
+  <CoffeeBean className="absolute bottom-[35%] left-[28%] w-6 h-6 md:w-9 md:h-9 opacity-20 -rotate-[35deg] animate-softBlink [animation-delay:1000ms]" />
+
+  <CoffeeBean className="absolute top-[55%] right-[40%] w-4 h-4 md:w-7 md:h-7 opacity-10 rotate-[10deg] animate-softBlink [animation-delay:600ms]" />
+
+  <CoffeeBean className="absolute top-[70%] left-[45%] w-6 h-6 md:w-10 md:h-10 opacity-15 rotate-[75deg] animate-softBlink [animation-delay:1400ms]" />
+
+  <CoffeeBean className="absolute top-[12%] left-[70%] w-5 h-5 md:w-8 md:h-8 opacity-10 -rotate-[50deg] animate-softBlink [animation-delay:850ms]" />
+
+  <CoffeeBean className="absolute bottom-[12%] right-[8%] w-7 h-7 md:w-12 md:h-12 opacity-15 rotate-[28deg] animate-softBlink [animation-delay:1600ms]" />
+
+</div>
+
+  <div
+    className="
+      absolute
+      top-[-120px]
+      left-[-120px]
+      w-[420px]
+      h-[420px]
+      rounded-full
+      bg-[#C8892A]/20
+      blur-[120px]
+    "
+  />
+
+  <div
+    className="
+      absolute
+      bottom-[-150px]
+      right-[-100px]
+      w-[350px]
+      h-[350px]
+      rounded-full
+      bg-[#8C6B58]/20
+      blur-[120px]
+    "
+  />
+
+</div>
+<div
+  className="
+    absolute inset-0
+    pointer-events-none
+    opacity-[0.03]
+    bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)]
+    bg-[size:70px_70px]
+  "
+/>
 
       {/* Title */}
-      <div className="animate-fadeInUp opacity-0 text-center py-10">
-        <h1 className="text-3xl md:text-4xl font-fraunces font-bold text-[#3B1F0E] tracking-wide">
+      <div className="text-center py-10">
+        <h1 className="text-4xl md:text-6xl opacity-0 animate-fadeInUp [animation-delay:200ms] italic uppercase font-fraunces font-bold text-[#2A160D] tracking-wide">
           Our Menu
         </h1>
-        <p className="text-sm text-[#6F4E37] mt-2">
+        <p className="text-sm text-[#6B5144] font-lato italic underline mt-2 opacity-0 animate-fadeInUp [animation-delay:600ms]">
           Crafted coffee experiences
         </p>
       </div>
@@ -95,7 +185,7 @@ export default function Menu() {
           >
 
             {/* Category Title */}
-            <h2 className="font-fraunces text-[#5C3D2E] text-2xl md:text-3xl font-bold mb-6 border-l-4 border-[#C8A27C] pl-3">
+            <h2 className="font-fraunces text-[#2A160D] text-2xl md:text-3xl font-bold mb-6 border-l-4 border-[#B57628] pl-3">
               {section.category}
             </h2>
 
@@ -104,18 +194,18 @@ export default function Menu() {
               {section.items.map((item, j) => (
                 <div
                   key={j}
-                  className="p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/30 shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                  className="p-5 rounded-2xl bg-[#FFF8F2]/20 backdrop-blur-md border border-[#D9C9B8]/40 shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold text-[#3B1F0E]">
+                    <h3 className="text-lg font-semibold font-fraunces text-[#6B5144]">
                       {item.name}
                     </h3>
-                    <span className="text-[#6F4E37] font-bold">
+                    <span className="text-[#B57628] font-bold">
                       ₹{item.price}
                     </span>
                   </div>
 
-                  <p className="text-sm text-[#5C3D2E] opacity-80 leading-relaxed">
+                  <p className="text-sm text-[#5C3D2E] font-fraunces opacity-80 leading-relaxed">
                     {item.description}
                   </p>
 

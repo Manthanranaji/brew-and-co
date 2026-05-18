@@ -1,26 +1,25 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function NavBar(){
     return(
-        <div className="sticky top-0 z-50 font-bold flex justify-between items-center w-full py-8 bg-[#F5EFE6]/20 backdrop-blur-md border-b border-[#9E8878]/40">
+        <div className="fixed top-4 z-50 isolate left-1/2 -translate-x-1/2  
+        w-[92%] font-bold flex justify-between items-center 
+        py-5 px-6 bg-[#EFE4D4]/30 backdrop-blur-lg 
+        border border-[#9E8878]/20 shadow-lg rounded-2xl">
+            
             <div>
-                <Link className="px-6 font-fraunces text-lg text-[#3B1F0E]"
-                href={"./"}>Brew & Co.</Link>
-            </div>
-            <div className="flex gap-4 px-6 font-lato text-[#5C3D2E]">
-                <Link
+                <Link className="md:px-6 px-2 font-fraunces text-lg text-[#3B1F0E]"
                 href={"./"}>
-                    Home
-                </Link>
-                <Link
-                href={"./menu"}>
-                    Menu
-                </Link>
-                <Link
-                href={"./about"}>
-                    About
+                    Brew & Co.
                 </Link>
             </div>
+            
+            <div className="flex gap-4 px-2 md:px-6 font-lato text-[#5C3D2E]">
+                <Link href={"./"}>Home</Link>
+                <Link href={"./menu"}>Menu</Link>
+                <Link href={"./about"}>About</Link>
+            </div>
+
         </div>
     )
 }
