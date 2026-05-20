@@ -35,9 +35,9 @@ export default function Home() {
   const r = 300;
 
   return (
-    <div className="relative scroll-smooth min-h-screen w-full pt-24 bg-gradient-to-br from-[#F7F1E8] to-[#EFE4D4]">
+    <div className="relative scroll-smooth min-h-screen overflow-hidden w-full pt-24 bg-gradient-to-br from-[#F7F1E8] to-[#EFE4D4]">
       <NavBar />
-      <div className="absolute inset-0  pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
 
   <div
     className="
@@ -83,17 +83,19 @@ export default function Home() {
   <CoffeeBean className="absolute bottom-72 left-2/3 md:h-8 md:w-8 w-5 h-5 opacity-20 -rotate-[15deg] animate-softBlink [animation-delay:300ms]" />
   <CoffeeBean className="absolute bottom-56 left-16 w-6 h-6 md:10 md:h-10 md:bottom-8 opacity-20 rotate-[45deg] animate-softBlink [animation-delay:900ms]" />
 </div>
-      <div className="bg-[#B57628]/50 md:bg-[#B57628]/60 mb-6 w-56 text-center rounded-2xl border border-[#C8892A]/50 text-white shadow-lg font-fraunces 
-      font-semibold tracking-widest italic animate-fadeInUp opacity-0 [animation-delay:900ms]">
-        <p>Best coffee brewers</p>
+      <div className="mb-6 w-56 text-sm text-center rounded-2xl border border-[#C8892A]/20 uppercase text-black shadow-lg font-fraunces 
+      font-semibold italic animate-fadeInUp opacity-0 [animation-delay:900ms]">
+        <p className="tracking-widest">&mdash; Best coffee brewers</p>
         </div>
-      <h1 className="text-[#2A160D] font-bold font-fraunces text-7xl md:text-9xl animate-fadeInUp opacity-0 [animation-delay:500ms]">Brewed <div className="font-bold font-fraunces text-[#C8892A] tracking-wide italic text-5xl md:text-8xl animate-fadeInUp opacity-0 [animation-delay:700ms]">To Feel</div></h1>
-      <p className="md:text-lg text-sm animate-fadeInUp opacity-0 [animation-delay:1200ms] py-4 px-4 font-lato font-semibold mb-4 italic md:tracking-wider text-[#7C5A49]">Your Daily Escape in a Cup</p>
-      <a className="bg-[#C8892A]/80 italic animate-fadeInUp opacity-0 [animation-delay:1500ms] rounded-lg px-6 md:py-4 md:rounded-xl md:bg-[#C8892A] shadow-lg py-3 ml-4 font-fraunces tracking-wider font-bold text-white hover:bg-[#A37746] select-none transition-colors"
+        <span className="text-[250px] font-['Playfair_Display'] font-black italic text-[#2c1a0e]/[0.04]
+        absolute top-1 translate-y-1/2 right-[-30px] leading-none pointer-events-none select-none">B</span>
+      <h1 className="text-[#2A160D]/80 font-semibold font-fraunces text-7xl md:text-9xl animate-fadeInUp opacity-0 [animation-delay:500ms] leading-tight">Brewed <div className="font-black font-fraunces text-[#b5743a]/80 tracking-widest italic text-5xl md:text-7xl animate-fadeInUp opacity-0 [animation-delay:700ms]">To Feel</div></h1>
+      <p className="md:text-lg text-sm mb-12 animate-fadeInUp opacity-0 [animation-delay:1200ms] py-4 px-4 font-lato font-semibold mb-4 tracking-widest text-[#7C5A49]">Your Daily Escape in a Cup. Every brew crafted with intention, every sip a pause from the ordinary</p>
+      <a className="bg-[#b5743a]/80 italic animate-fadeInUp opacity-0 [animation-delay:1500ms] rounded-sm md:py-4 md:rounded-xl px-3 md:bg-[#b5743a] shadow-lg py-3 ml-4 font-fraunces tracking-wider font-bold text-white hover:bg-[#A37746] select-none transition-colors"
       href="/menu"
       >Try your first brew</a>
     </div>
-    <div className="bg-[white]/50 animate-fadeInUp opacity-0 [animation-delay:1800ms] border border-[#D9C9B8] shadow-xl w-72 h-80 -mt-36 md:h-[400px] mb-8 rounded-2xl backdrop-blur-md text-center mx-auto md:mx-0 md:mt-36 md:ml-56">
+    <div className="bg-[#f5ede0] animate-fadeInUp opacity-0 [animation-delay:1800ms] border border-[#D9C9B8] shadow-xl w-72 h-80 md:h-[34 0px] -mt-36 md:h-[400px] mb-8 rounded-2xl backdrop-blur-md text-left mx-auto md:mx-0 md:mt-36 md:ml-56">
     <Image
       src="/coffee.png"
       alt="Coffee"
@@ -101,58 +103,28 @@ export default function Home() {
       height={270}
       className="rounded-2xl mx-auto mt-4 animate-fadeInUp opacity-0 [animation-delay:2000ms]"
     ></Image>
-    <h2 className="py-8 px-4 text-[#6B5144] font-lato font-bold text-xl italic animate-fadeInUp opacity-0 [animation-delay:2400ms]">Where Every cup <div className="font-fraunces text-2xl">is<span className="text-[#B57628] uppercase underline"> perfect</span></div></h2>
-    <div className="animate-fadeInUp opacity-0 [animation-delay:2500ms] rounded-full shadow-lg h-20 w-20 bg-white/30 -mt-8 md:mt-10 backdrop-blur-md md:shadow-xl -ml-8 flex items-center justify-center text-5xl">
-  ☕
-</div>
+    <h2 className="py-8 px-4 text-[#6B5144] font-lato font-bold text-xl tracking-wider italic animate-fadeInUp opacity-0 [animation-delay:2400ms]">Every cup. Crafted with intention</h2>
+    
   </div></div>
-  <div className="flex flex-col gap-8 md:-mt-48 md:gap-16">
-
-  <div className="group bg-[#4A2917]/75 backdrop-blur-md border border-[#C89B6D]/20 
-  rounded-tr-[2rem] rounded-bl-[1rem] px-6 py-6 shadow-xl transition-all duration-300 
-  hover:translate-x-1 hover:bg-[#5A321D]/80">
-
-    <h2 className="text-2xl md:text-5xl tracking-wide leading-tight 
-    font-fraunces text-white font-bold">
-      From Cappuccinos 
-      to Lattes
-    </h2>
-
-    <p className="text-[#E6D5C3] font-lato italic mt-3 tracking-wide">
-      Crafted for every mood and every moment.
+  <div className="bg-[#2c1a0e] -mt-16 md:-mt-56 px-8 py-14 relative mb-16 overflow-hidden">
+    
+    <span className="absolute right-[-20px] top-1/2 -translate-y-1/2
+    font-['Playfair_Display'] font-light italic
+    text-[200px] text-white/5 leading-none pointer-events-none select-none">C</span>
+    <p className="text-white/40 tracking-widest font-xs uppercase mb-6">
+      Our Craft
     </p>
-
-  </div>
-
-  <div className="group bg-[#4A2917]/75 backdrop-blur-md border border-[#C89B6D]/20 
-  rounded-tr-[2rem] rounded-bl-[1rem] px-6 py-6 shadow-xl transition-all duration-300 
-  hover:translate-x-1 hover:bg-[#5A321D]/80">
-
-    <h2 className="text-2xl md:text-5xl tracking-wide leading-tight 
-    font-fraunces text-white font-bold">
-      Enjoy Everything
+    <h2 className="text-white font-fraunces font-medium
+    text-5xl leading-tight mb-6">
+      Every sip tells<br/>
+      <span className="text-[#c8853a] italic">a story.</span>
     </h2>
-
-    <p className="text-[#E6D5C3] font-lato italic mt-3 tracking-wide">
-      Warm brews, rich aromas, and café comfort.
+    <div className="w-12 h-[1px] bg-white/20 mb-6"/>
+    <p className="text-white/50 text-sm leading-relaxed font-light">
+      From ethical farms to your cup -
+      precision at every step.
     </p>
-
-  </div>
-
-  <div className="pt-3">
-    <Link
-      href={"/menu"}
-      className="inline-flex items-center gap-3 bg-[#C8892A] hover:bg-[#B57628]
-      transition-all duration-300 text-white font-fraunces font-bold
-      tracking-wider px-7 py-4 ml-8 mb-24 rounded-xl shadow-lg select-none"
-    >
-      Go Through The Menu
-      <span className="text-xl">→</span>
-    </Link>
-  </div>
-
-</div>
-  
+    </div>
 </div>
       
   );

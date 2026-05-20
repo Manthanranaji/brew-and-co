@@ -1,5 +1,10 @@
 import "./globals.css"
-import { Fraunces, Lato } from "next/font/google"
+import { Fraunces, Lato, Playfair_Display } from "next/font/google"
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['900']
+})
 
 const fraunces = Fraunces({
   subsets: ["latin"],
