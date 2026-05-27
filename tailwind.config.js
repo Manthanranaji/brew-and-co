@@ -24,6 +24,9 @@ module.exports = {
       fontFamily: {
         fraunces: ["var(--font-fraunces)"],
         lato: ["var(--font-lato)"],
+        vibes: ["var(--font-vibes)"],
+        cormorant: ["var(--font-cormorant)"],
+        playfair: ["var(--font-playfair)"],
       },
     },
   },

@@ -32,6 +32,15 @@ function CoffeeBean({ className = "" }) {
 
 export default function Home() {
 
+  const ref = useReveal();
+  const ref1 = useReveal();
+  const ref2= useReveal();
+  const ref3 = useReveal();
+  const ref4 = useReveal();
+  const ref5 = useReveal();
+  const ref6 = useReveal();
+
+
   const r = 300;
 
   return (
@@ -83,19 +92,20 @@ export default function Home() {
   <CoffeeBean className="absolute bottom-72 left-2/3 md:h-8 md:w-8 w-5 h-5 opacity-20 -rotate-[15deg] animate-softBlink [animation-delay:300ms]" />
   <CoffeeBean className="absolute bottom-56 left-16 w-6 h-6 md:10 md:h-10 md:bottom-8 opacity-20 rotate-[45deg] animate-softBlink [animation-delay:900ms]" />
 </div>
-      <div className="mb-6 w-56 text-sm text-center rounded-2xl border border-[#C8892A]/20 uppercase text-black shadow-lg font-fraunces 
-      font-semibold italic animate-fadeInUp opacity-0 [animation-delay:900ms]">
+      <div className="mb-6 md:-mt-12 w-56 bg-[#EFE4D4]/60 md:w-72 text-sm text-center rounded-lg border border-[#C8892A]/35 uppercase md:text-lg shadow-md font-cormorant
+      font-bold italic animate-fadeInUp opacity-0 [animation-delay:900ms]">
         <p className="tracking-widest">&mdash; Best coffee brewers</p>
         </div>
         <span className="text-[250px] font-['Playfair_Display'] font-black italic text-[#2c1a0e]/[0.04]
         absolute top-1 translate-y-1/2 right-[-30px] leading-none pointer-events-none select-none">B</span>
-      <h1 className="text-[#2A160D]/80 font-semibold font-fraunces text-7xl md:text-9xl animate-fadeInUp opacity-0 [animation-delay:500ms] leading-tight">Brewed <div className="font-black font-fraunces text-[#b5743a]/80 tracking-widest italic text-5xl md:text-7xl animate-fadeInUp opacity-0 [animation-delay:700ms]">To Feel</div></h1>
-      <p className="md:text-lg text-sm mb-12 animate-fadeInUp opacity-0 [animation-delay:1200ms] py-4 px-4 font-lato font-semibold mb-4 tracking-widest text-[#7C5A49]">Your Daily Escape in a Cup. Every brew crafted with intention, every sip a pause from the ordinary</p>
-      <a className="bg-[#b5743a]/80 italic animate-fadeInUp opacity-0 [animation-delay:1500ms] rounded-sm md:py-4 md:rounded-xl px-3 md:bg-[#b5743a] shadow-lg py-3 ml-4 font-fraunces tracking-wider font-bold text-white hover:bg-[#A37746] select-none transition-colors"
+      <h1 className="text-[#2A160D]/80 font-vibes -mt-4 font-extralight tracking-wider text-[9rem] md:text-[14rem] animate-fadeInUp opacity-0 [animation-delay:500ms] leading-tight">B<span className="font-cormorant text-5xl md:text-7xl italic underline decoration-1 underline-offset-8 font-extralight">rewed</span>
+      <div className="font-bold md:-mt-12 font-cormorant -mt-8 text-[#b5743a]/80 tracking-widest italic text-5xl md:text-6xl animate-fadeInUp opacity-0 [animation-delay:700ms]">To Feel</div></h1>
+      <p className="md:text-lg text-sm mb-12 animate-fadeInUp opacity-0 [animation-delay:1200ms] py-6 px-4 font-cormorant text-lg mb-4 tracking-widest text-[#7C5A49]">Your Daily Escape in a Cup. Every brew crafted with intention, every sip a pause from the ordinary</p>
+      <a className="bg-[#b5743a]/80 italic md:text-lg animate-fadeInUp opacity-0 [animation-delay:1500ms] rounded-md md:py-4 md:rounded-md px-3 md:bg-[#b5743a] shadow-lg py-3 ml-4 font-cormorant font-semibold tracking-widest text-md font-medium text-white hover:bg-[#A37746] select-none transition-colors"
       href="/menu"
       >Try your first brew</a>
     </div>
-    <div className="bg-[#f5ede0] animate-fadeInUp opacity-0 [animation-delay:1800ms] border border-[#D9C9B8] shadow-xl w-72 h-80 md:h-[34 0px] -mt-36 md:h-[400px] mb-8 rounded-2xl backdrop-blur-md text-left mx-auto md:mx-0 md:mt-36 md:ml-56">
+    <div ref={ref} className="bg-[#f5ede0] opacity-0 [animation-delay:1800ms] border border-[#D9C9B8] shadow-xl w-72 h-80 md:h-[34 0px] -mt-36 md:h-[400px] mb-8 rounded-2xl backdrop-blur-md text-left mx-auto md:mx-0 md:mt-36 md:ml-56">
     <Image
       src="/coffee.png"
       alt="Coffee"
@@ -111,16 +121,16 @@ export default function Home() {
     <span className="absolute right-[-20px] top-1/2 -translate-y-1/2
     font-['Playfair_Display'] font-light italic
     text-[200px] text-white/5 leading-none pointer-events-none select-none">C</span>
-    <p className="text-white/40 tracking-widest font-xs uppercase mb-6">
+    <p ref={ref1} className="opacity-0 text-white/40 tracking-widest font-xs uppercase mb-6">
       Our Craft
     </p>
-    <h2 className="text-white font-fraunces font-medium
+    <h2 ref={ref2} className="opacity-0 text-white font-fraunces font-medium
     text-5xl leading-tight mb-6">
       Every sip tells<br/>
       <span className="text-[#c8853a] italic">a story.</span>
     </h2>
     <div className="w-12 h-[1px] bg-white/20 mb-6"/>
-    <p className="text-white/50 text-sm leading-relaxed font-light">
+    <p ref={ref3} className="text-white/50 text-sm leading-relaxed font-light">
       From ethical farms to your cup -
       precision at every step.
     </p>

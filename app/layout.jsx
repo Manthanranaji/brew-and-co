@@ -1,9 +1,22 @@
 import "./globals.css"
-import { Fraunces, Lato, Playfair_Display } from "next/font/google"
+import { Cormorant_Garamond, Fraunces, Lato, Playfair_Display, Lovers_Quarrel } from "next/font/google"
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-cormorant",
+})
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['900']
+  weight: ['400','500','600','700','800','900'],
+  variable: "--font-playfair",
+})
+
+const vibes = Lovers_Quarrel({
+  weight: "400",
+  subsets: ['latin'],
+  variable: "--font-vibes"
 })
 
 const fraunces = Fraunces({
@@ -26,7 +39,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${fraunces.variable} ${lato.variable}`}>
+      <body className={`${fraunces.variable} ${playfair.variable} ${vibes.variable} ${cormorant.variable} ${lato.variable}`}>
         {children}
       </body>
     </html>
